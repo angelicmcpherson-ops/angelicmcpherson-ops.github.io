@@ -1,0 +1,109 @@
+/* ----------------------------------
+ * ID SELECTOR: #
+ * Used for UNIQUE, major structural elements.
+ * ---------------------------------- */
+#main-content {
+    /* Styles the unique main area */
+    border: 2px solid #180439; /* Red border for emphasis */
+    padding: 20px;
+}
+
+/* ----------------------------------
+ * CLASS SELECTOR: .
+ * Used for REUSABLE styling across multiple elements.
+ * ---------------------------------- */
+
+.styled-list {
+    font-family: 'Georgia', serif;
+    color: #ba5bd28d; 
+    list-style-type: square; /* Custom list style */
+}
+
+.list-container {
+    /* A reusable background color for sections containing lists */
+    background-color: #9ff5efaa; 
+    margin-top: 15px;
+    padding: 10px;
+    align-content: center;
+}
+
+/* ----------------------------------
+ * FONT & COLOR PROPERTIES
+ * ---------------------------------- */
+h1 {
+    /* Font Size Example */
+    font-size: 3em; 
+    
+    /* Text Color Example */
+    color: rgb(0, 85, 128);
+}
+
+header {
+    /* Background Color Example */
+    background-color: #a631d8; 
+}
+
+/* ----------------------------------
+ * MAKE image frame!
+ * ---------------------------------- */
+
+img {
+  border: 10px solid #323;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px #568;
+}
+
+img:hover {
+  border-radius: 50%;
+  transition: border-radius 1s ease-in-out 2s;
+}
+
+/* ----------------------------------
+ * MAKE BUTTON for LINK
+ * ---------------------------------- */
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #677af4;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+a:hover {
+  background-color: #b52546;
+  transition: background-color 1s ease-in;
+}
+
+
+/* ----------------------------------
+ * FLEXBOX FUN: HOBBY CARDS
+ * ---------------------------------- */
+.hobby-cards {
+  display: flex;              /* make container flex */
+  justify-content: space-around; /* spread cards evenly horizontally */
+  align-items: center;        /* vertically center cards */
+  flex-wrap: wrap;            /* wrap to next line if screen is narrow */
+  margin-top: 20px;
+}
+
+.hobby-card {
+  background-color: #ffd6f0;
+  border: 2px solid #d14abf;
+  color: black;
+  border-radius: 15px;
+  padding: 20px;
+  width: 150px;               /* fixed width for uniform cards */
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hobby-card:hover {
+  transform: scale(1.1);       /* pop-up effect on hover */
+  background-color: #ffb3e0;   /* change color on hover */
+}
+
+
