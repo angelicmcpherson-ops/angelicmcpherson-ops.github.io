@@ -1,50 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>About Me</title>
+    <meta charset="UTF-8" />
+    <title>Angelic's Website</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <header>
-      <h1>Hi, I'm Angelic!</h1>
+    <!-- Navigation -->
+    <nav class="site-nav">
+      <div class="nav-logo">Angelic</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="baking.html">Baking</a>
+        <a href="#">Travel</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero / Welcome Section -->
+    <header class="hero">
+      <h2>Hi, I'm Angelic!</h2>
     </header>
 
+    <!-- Main Content -->
     <main id="main-content">
-      <img src="IMG_7579.JPG" alt="My Photo" width="200" />
       
-      <div class="hobby-cards">
-        <div class="hobby-card">Reading</div>
-        <a href="baking.html" class="hobby-card">Baking</a>
-        <div class="hobby-card">Traveling</div>
-      </div>
+      <!-- Image Section -->
+      <section class="list-container">
+        <img src="IMG_7579.JPG" alt="Photo of Angelic" width="200" />
+      </section>
 
-      <p>
-        Visit my favorite website:
-        <a href="https://play2048.co/" target="_blank">Click here!</a>
-      </p>
+      <!-- Hobbies Section -->
+      <section class="list-container">
+        <div class="hobby-cards">
+          <div class="hobby-card">Reading</div>
+          <a href="baking.html" class="hobby-card">Baking</a>
+          <div class="hobby-card">Traveling</div>
+        </div>
+      </section>
 
-      <h2>My Favorite Baking Video</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/OBpU3xydz50?si=ed2vUsSbe36qRXjA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-      <div>
-        <p> Let's play a game! I'm going to ask you 3 questions and then generate a color I think fits you best! Type in your answers below!</p>
-      <input id="animal" placeholder="Favorite animal" />
-      <input id="song" placeholder="Favorite song" />
-      <input id="movie" placeholder="Favorite movie" />
-      <button id="submit">Generate Color</button>
-      </div>
-      <span>
-        <p> Do you like the color?</p>
-      </span>
+      <!-- Favorite Website -->
+      <section class="list-container">
+        <p class="styled-list">
+          Visit my favorite website:
+          <a href="https://play2048.co/" target="_blank">Click here!</a>
+        </p>
+      </section>
 
     </main>
 
-    <footer>
-      <p class="styled-list">Made by Angelic</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-logo">Angelic</div>
+      <div class="footer-links">
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+      </div>
     </footer>
 
-    <!-- PUT JS LINK HERE  -->
     <script src="script.js"></script>
   </body>
 </html>
-

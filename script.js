@@ -1,8 +1,8 @@
-// Update the heading text to be in Spanish
-let title = document.querySelector("h1");
-title.innerText = "Hola, me llamo Angelic";
-// title.innerHTML = "<em>Hola, me llamo Angelic</em>";
-title.style.color = "black";
+// // Update the heading text to be in Spanish
+// let title = document.querySelector("h1");
+// title.innerText = "Hola, me llamo Angelic";
+// // title.innerHTML = "<em>Hola, me llamo Angelic</em>";
+// title.style.color = "black";
 
 // Add a button!
 const factBtn = document.querySelector("#fact-btn");

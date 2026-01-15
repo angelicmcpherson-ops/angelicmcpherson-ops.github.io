@@ -1,52 +1,91 @@
 /* ----------------------------------
- * ID SELECTOR: #
- * Used for UNIQUE, major structural elements.
+ * GLOBAL RESET
  * ---------------------------------- */
-#main-content {
-    /* Styles the unique main area */
-    border: 2px solid #180439; /* Red border for emphasis */
-    padding: 20px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* ----------------------------------
- * CLASS SELECTOR: .
- * Used for REUSABLE styling across multiple elements.
+ * MAIN CONTENT
  * ---------------------------------- */
+#main-content {
+  border: 2px solid #180439;
+  padding: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+}
 
+/* ----------------------------------
+ * NAVIGATION (FLEXBOX TEMPLATE)
+ * ---------------------------------- */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #180439;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Nav links reuse your button logic, but slimmer */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  background-color: #677af4;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background-color 0.5s ease;
+}
+
+.nav-links a:hover {
+  background-color: #b52546;
+}
+
+/* ----------------------------------
+ * HERO SECTION
+ * ---------------------------------- */
+.hero {
+  background-color: #a631d8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3em;
+  color: rgb(0, 85, 128);
+}
+
+/* ----------------------------------
+ * REUSABLE CLASSES
+ * ---------------------------------- */
 .styled-list {
-    font-family: 'Georgia', serif;
-    color: #ba5bd28d; 
-    list-style-type: square; /* Custom list style */
+  font-family: 'Georgia', serif;
+  color: #ba5bd28d;
 }
 
 .list-container {
-    /* A reusable background color for sections containing lists */
-    background-color: #9ff5efaa; 
-    margin-top: 15px;
-    padding: 10px;
-    align-content: center;
+  background-color: #9ff5efaa;
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 /* ----------------------------------
- * FONT & COLOR PROPERTIES
+ * IMAGE FRAME + TRANSITION
  * ---------------------------------- */
-h1 {
-    /* Font Size Example */
-    font-size: 3em; 
-    
-    /* Text Color Example */
-    color: rgb(0, 85, 128);
-}
-
-header {
-    /* Background Color Example */
-    background-color: #a631d8; 
-}
-
-/* ----------------------------------
- * MAKE image frame!
- * ---------------------------------- */
-
 img {
   border: 10px solid #323;
   padding: 20px;
@@ -55,15 +94,15 @@ img {
 }
 
 img:hover {
-  border-radius: 50%;
-  transition: border-radius 1s ease-in-out 2s;
+  border-radius: 20%;
+  /* transition: border-radius 1s ease-in-out 0.5s; */
 }
 
-/* ----------------------------------
- * MAKE BUTTON for LINK
- * ---------------------------------- */
 
-a {
+/* ----------------------------------
+ * BUTTON-LIKE LINKS (MAIN CONTENT ONLY)
+ * ---------------------------------- */
+main a {
   display: inline-block;
   text-decoration: none;
   color: white;
@@ -72,21 +111,20 @@ a {
   border-radius: 10px;
 }
 
-a:hover {
+main a:hover {
   background-color: #b52546;
   transition: background-color 1s ease-in;
 }
-
 
 /* ----------------------------------
  * FLEXBOX FUN: HOBBY CARDS
  * ---------------------------------- */
 .hobby-cards {
-  display: flex;              /* make container flex */
-  justify-content: space-around; /* spread cards evenly horizontally */
-  align-items: center;        /* vertically center cards */
-  flex-wrap: wrap;            /* wrap to next line if screen is narrow */
-  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .hobby-card {
@@ -95,15 +133,49 @@ a:hover {
   color: black;
   border-radius: 15px;
   padding: 20px;
-  width: 150px;               /* fixed width for uniform cards */
+  width: 150px;
   text-align: center;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .hobby-card:hover {
-  transform: scale(1.1);       /* pop-up effect on hover */
-  background-color: #ffb3e0;   /* change color on hover */
+  transform: scale(1.1);
+  background-color: #ffb3e0;
 }
 
+/* ----------------------------------
+ * FOOTER (FLEXBOX TEMPLATE)
+ * ---------------------------------- */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #180439;
+  margin-top: 40px;
+}
 
+.footer-logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  background-color: #677af4;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background-color 0.5s ease;
+}
+
+.footer-links a:hover {
+  background-color: #b52546;
+}
