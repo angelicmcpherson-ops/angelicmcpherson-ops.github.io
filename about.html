@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Angie’s Cookies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Angie's Cookies Logo">
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Meet the Baker</h1>
+    <img src="brown_id_photo.jpeg" alt="Angie's Photo" class="pfp">
+    <p>The heart behind Angie’s Cookies</p>
+  </header>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section class="section">
+      <h2>About Angie’s Cookies</h2>
+      <p>
+        Hi! I’m <strong>Angelic McPherson</strong>, owner and baker behind
+        Angie’s Cookies. What began as baking for friends turned into a love
+        for creating nostalgic treats that bring comfort and joy.
+      </p>
+    </section>
+
+    <!-- MISSION -->
+    <section class="section highlight">
+      <h2>Our Mission</h2>
+      <p>
+        To bake thoughtfully, use quality ingredients, and create cookies
+        that feel personal, warm, and made with care.
+      </p>
+    </section>
+
+    <!-- FUN / GAMIFIED -->
+    <section class="section">
+      <h2>Let’s Have Some Fun </h2>
+
+      <p>What’s your favorite cookie?</p>
+
+      <input type="text" id="cookieInput" placeholder="Enter your favorite cookie">
+      <br><br>
+      <button class="cta-btn" id="cookieBtn">Submit</button>
+
+      <p id="cookieResult" style="margin-top:20px;"></p>
+    </section>
+
+    <section class="section">
+      <button class="cta-btn" id="fact-btn">Show a Baking Fun Fact</button>
+      <p id="fact" style="margin-top:20px;"></p>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="section">
+      <h2>Baking Inspiration</h2>
+      <p>This video always inspires me in the kitchen.</p>
+
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/OBpU3xydz50"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div>Angie’s Cookies • Providence, RI</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,181 +1,264 @@
-/* ----------------------------------
- * GLOBAL RESET
- * ---------------------------------- */
+/* =========================
+   RESET
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ----------------------------------
- * MAIN CONTENT
- * ---------------------------------- */
-#main-content {
-  border: 2px solid #180439;
-  padding: 40px;
-  max-width: 900px;
-  margin: 40px auto;
+/* =========================
+   DESIGN TOKENS
+========================= */
+:root {
+  --cream: #f7f3ef;
+  --blush: #f1c6d8;
+  --cocoa: #3a2a2f;
+  --charcoal: #1f1f1f;
+  --accent: #c97a95;
+  --white: #ffffff;
 }
 
-/* ----------------------------------
- * NAVIGATION (FLEXBOX TEMPLATE)
- * ---------------------------------- */
+/* =========================
+   GLOBAL
+========================= */
+body {
+  font-family: "Georgia", serif;
+  background-color: var(--cream);
+  color: var(--cocoa);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.05em;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 .site-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background-color: #180439;
+  padding: 20px 40px;
+  background-color: var(--white);
+  border-bottom: 1px solid #ddd;
 }
 
-.nav-logo {
-  color: white;
-  font-size: 1.5em;
-  font-weight: bold;
+.nav-logo img {
+  height: 120px;
+  width: auto;
 }
 
-.nav-links {
-  display: flex;
-  gap: 15px;
-}
-
-/* Nav links reuse your button logic, but slimmer */
 .nav-links a {
-  text-decoration: none;
-  color: white;
-  background-color: #677af4;
-  padding: 8px 15px;
-  border-radius: 8px;
-  transition: background-color 0.5s ease;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  background-color: #b52546;
+  color: var(--accent);
 }
 
-/* ----------------------------------
- * HERO SECTION
- * ---------------------------------- */
+/* =========================
+   HERO (ALL PAGES)
+========================= */
 .hero {
-  background-color: #a631d8;
-  padding: 60px 20px;
+  background: linear-gradient(to right, var(--blush), var(--cream));
   text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3.2em;
+  margin-bottom: 15px;
 }
 
 .hero h2 {
-  font-size: 3em;
-  color: rgb(0, 85, 128);
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-/* ----------------------------------
- * REUSABLE CLASSES
- * ---------------------------------- */
-.styled-list {
-  font-family: 'Georgia', serif;
-  color: #ba5bd28d;
+.hero p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: auto;
 }
 
-.list-container {
-  background-color: #9ff5efaa;
-  margin-top: 30px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-/* ----------------------------------
- * IMAGE FRAME + TRANSITION
- * ---------------------------------- */
-img {
-  border: 10px solid #323;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 0 10px #568;
-}
-
-img:hover {
-  border-radius: 20%;
-  /* transition: border-radius 1s ease-in-out 0.5s; */
-}
-
-
-/* ----------------------------------
- * BUTTON-LIKE LINKS (MAIN CONTENT ONLY)
- * ---------------------------------- */
-main a {
+/* =========================
+   BUTTONS
+========================= */
+.cta-btn {
   display: inline-block;
-  text-decoration: none;
-  color: white;
-  background-color: #677af4;
-  padding: 10px 20px;
-  border-radius: 10px;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: var(--cocoa);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-main a:hover {
-  background-color: #b52546;
-  transition: background-color 1s ease-in;
+.cta-btn:hover {
+  background-color: var(--accent);
+  transform: scale(0.98);
 }
 
-/* ----------------------------------
- * FLEXBOX FUN: HOBBY CARDS
- * ---------------------------------- */
-.hobby-cards {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.cta-btn.large {
+  font-size: 1.2em;
+  padding: 18px 40px;
 }
 
-.hobby-card {
-  background-color: #ffd6f0;
-  border: 2px solid #d14abf;
-  color: black;
-  border-radius: 15px;
-  padding: 20px;
-  width: 150px;
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
   text-align: center;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.hobby-card:hover {
-  transform: scale(1.1);
-  background-color: #ffb3e0;
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
 }
 
-/* ----------------------------------
- * FOOTER (FLEXBOX TEMPLATE)
- * ---------------------------------- */
-.site-footer {
+.section p {
+  max-width: 650px;
+  margin: auto;
+}
+
+/* Highlight section (used for rewards / mission) */
+.section.highlight {
+  background-color: var(--blush);
+  padding: 80px 20px;
+}
+
+/* =========================
+   CARDS (REWARDS)
+========================= */
+.card-row {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  width: 250px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.info-card:hover {
+  box-shadow: 0 0 25px 5px #f27ba5;
+  transform: scale(1.05);
+  transition: transform ease;
+}
+.info-card h3 {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   MENU PAGE
+========================= */
+.menu-hero {
+  background-color: var(--blush);
+  text-align: center;
+  padding: 90px 20px;
+  border-top:5px dotted #1f1f1f;
+  border-bottom:5px dotted #1f1f1f;
+}
+
+.menu-hero h1 {
+  font-size: 3em;
+}
+
+.menu-page {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 40px;
+  box-shadow: 0 10px 20px #3a2a2f;
+}
+
+.menu-section {
+  margin-bottom: 60px;
+}
+
+.menu-section h2 {
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.menu-section ul {
+  list-style: none;
+}
+
+.menu-section li {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 30px;
-  background-color: #180439;
-  margin-top: 40px;
+  padding: 12px 0;
+  font-size: 1.1em;
 }
 
-.footer-logo {
-  color: white;
-  font-weight: bold;
-  font-size: 1.2em;
+/* =========================
+   ABOUT – FUN / INPUTS
+========================= */
+input[type="text"] {
+  padding: 12px;
+  width: 260px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  margin-top: 15px;
 }
 
-.footer-links {
+iframe {
+  margin-top: 30px;
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.pfp{
+  width: auto;
+  height: 200px;
+  border: 3px solid #3a2a2f;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  background-color: var(--charcoal);
+  color: var(--white);
+  padding: 40px;
   display: flex;
-  gap: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-links a {
-  text-decoration: none;
-  color: white;
-  background-color: #677af4;
-  padding: 8px 15px;
-  border-radius: 8px;
-  transition: background-color 0.5s ease;
+  margin-left: 20px;
+  color: var(--white);
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  background-color: #b52546;
+  color: var(--accent);
 }
